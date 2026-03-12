@@ -1,14 +1,12 @@
-/* ---------------- GENERAL ---------------- */
 body{
     font-family: 'Comic Sans MS', cursive;
     margin:0;
-    background:#f3e5f5;
+    background:#e0f7fa;
     color:#333;
 }
 
-/* ---------------- HEADER ---------------- */
 header{
-    background: linear-gradient(90deg, #8e44ad, #e67e22);
+    background: linear-gradient(90deg, #8e44ad, #5dade2);
     color:white;
     display:flex;
     justify-content:space-between;
@@ -32,7 +30,6 @@ nav a:hover{
     transform:scale(1.1);
 }
 
-/* ---------------- HOME SECTION ---------------- */
 .home{
     text-align:center;
     padding:40px 0;
@@ -67,7 +64,6 @@ nav a:hover{
     text-shadow:0.5px 0.5px #ddd;
 }
 
-/* ---------------- DASHBOARD & TASKS ---------------- */
 .dashboard{
     text-align:center; 
     padding:40px 20px;
@@ -101,18 +97,29 @@ button:hover{
     box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
-/* ADD TASK BUTTON COLOR - SOFT PURPLE */
 #addTaskBtn{
     background: linear-gradient(90deg,#9b59b6,#8e44ad);
 }
 
-/* OTHER BUTTON COLORS */
 button.edit{ background:#f39c12; } 
 button.done{ background:#2ecc71; } 
 button.delete{ background:#e74c3c; } 
 button.restore{ background:#3498db; }
 
-/* TASK LIST */
+.search input{
+    width:60%;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    margin-bottom:15px;
+    transition:0.3s;
+}
+.search input:focus{
+    border-color:#8e44ad;
+    box-shadow:0 0 10px rgba(142,68,173,0.4);
+    outline:none;
+}
+
 ul{
     list-style:none;
     padding:0;
@@ -145,7 +152,6 @@ li.failed{
     opacity:0.85;
 }
 
-/* Countdown timer below task */
 li span{
     display:block;
     font-size:0.9em;
@@ -153,7 +159,6 @@ li span{
     color:#555;
 }
 
-/* ---------------- PROGRESS BAR ---------------- */
 .progress{
     margin-top:30px;
 }
@@ -171,7 +176,6 @@ li span{
 #progressPending{ background:#f1c40f; height:100%; width:0%; transition:width 0.5s; }
 #progressText{ margin-top:5px; font-weight:bold; color:#333; }
 
-/* ---------------- HISTORY ---------------- */
 #historyList li{
     background: linear-gradient(135deg,#dcdde1,#f5f6fa);
     padding:20px;
@@ -191,10 +195,10 @@ li span{
     font-size:0.85em;
 }
 
-/* ---------------- RESPONSIVE ---------------- */
 @media(max-width:650px){
     header{flex-direction:column;text-align:center;}
     .form input{width:90%;}
     .dashboard{padding:20px;}
     .banner img{height:300px;}
+    .search input{width:90%;}
 }
