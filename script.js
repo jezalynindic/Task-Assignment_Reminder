@@ -232,13 +232,22 @@ function checkReminders(){
     addBtn.style.background = "linear-gradient(90deg,#9b59b6,#8e44ad)";
 }
 
-// ------------------ SEARCH ------------------
+// ------------------ SEARCH (Tasks + History) ------------------
 function searchTasks(){
     const filter = document.getElementById("searchInput").value.toLowerCase();
+
+    // Filter active tasks
     const taskList = document.getElementById("taskList");
     const tasksLi = taskList.getElementsByTagName("li");
-
     Array.from(tasksLi).forEach(li=>{
+        const text = li.textContent.toLowerCase();
+        li.style.display = text.includes(filter) ? "" : "none";
+    });
+
+    // Filter history tasks
+    const historyList = document.getElementById("historyList");
+    const historyLi = historyList.getElementsByTagName("li");
+    Array.from(historyLi).forEach(li=>{
         const text = li.textContent.toLowerCase();
         li.style.display = text.includes(filter) ? "" : "none";
     });
