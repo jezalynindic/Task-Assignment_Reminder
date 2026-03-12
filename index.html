@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assignment / Task Reminder</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>Assignment / Task Reminder </h1>
+<nav>
+<a href="#home">Home</a>
+<a href="#tasks">Tasks</a>
+<a href="#history">History</a>
+</nav>
+</header>
+
+<!-- HOME SECTION -->
+<section id="home" class="home">
+<div class="banner">
+<img src="banner.png" alt="Study Banner">
+</div>
+<h2>Organize Your School Work</h2>
+<p>Track your assignments, never miss a deadline, and see your progress!</p>
+
+<p>“Don’t watch the clock; do what it does. Keep going.”</p>
+</section>
+
+<!-- TASK DASHBOARD -->
+<section id="tasks" class="dashboard">
+<h2>Add Assignment/Task</h2>
+<div class="form">
+<input type="text" id="taskInput" placeholder="Assignment Name">
+<input type="datetime-local" id="deadlineInput">
+<button id="addTaskBtn" onclick="addTask()">Add Task</button>
+</div>
+
+<h2>Your Tasks</h2>
+<ul id="taskList"></ul>
+
+<!-- Progress Bar -->
+<div class="progress">
+<p>Progress</p>
+<div class="progress-bar">
+<div id="progressDone"></div>
+<div id="progressOverdue"></div>
+<div id="progressPending"></div>
+</div>
+<p id="progressText"></p>
+</div>
+</section>
+
+<!-- HISTORY SECTION -->
+<section id="history" class="dashboard">
+<h2>Task History</h2>
+<p>Completed or overdue tasks can be restored or deleted permanently.</p>
+<ul id="historyList"></ul>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
